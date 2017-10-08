@@ -1,0 +1,193 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% General document options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,c]{beamer}
+\usetheme{Xion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% Usual LaTeX Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ragged2e}		% For justified alignment
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% Talk and speaker info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Xion --- A Clean And Simple Beamer Theme}
+\author{Anatoly Arlashin}
+\date{\footnotesize Last updated: Aug 2017}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% Main Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{frame}[plain] % plain option removes header/footer/navigation/sidebar
+	\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+	\tableofcontents
+\end{frame}
+
+\section{Introduction}
+	\begin{frame}{Why create my own theme?}
+		\justifying	
+		First, that's the best way to learn Beamer inner mechanics. Almost all Beamer tutorials that can be found online deal with changing some of the elements of existing themes inside the slides, as opposed to in a theme file. Q\&As on StackExchange help a little more, but good answers for in-depth questions are still hard to find.
+		
+		\bigskip
+		Second, all Beamer themes that I've seen were somehow flawed (to my liking) --- too bright, too dark, too fancy, too many pictures, weird colors, asymetric geometry etc. 
+		
+		\bigskip
+		When I found Zurich theme, it seemed almost perfect, just a few tweaks here and there. Or so it seemed at first \ldots
+	\end{frame}
+
+\section{Theme Elements}
+\subsection{Colors}
+	\begin{frame}{Defined colors}
+		The theme defines the following colors (and then actually uses only a few):
+		\medskip
+		\begin{columns}[t, onlytextwidth]
+			\begin{column}{0.3\textwidth}\centering
+				\textcolor{lightscarlet}{lightscarlet}
+				
+				\textcolor{mediumscarlet}{mediumscarlet}
+				
+				\textcolor{darkscarlet}{darkscarlet}
+				
+				\textcolor{crimson}{crimson}
+				
+				\textcolor{lightchameleon}{lightchameleon}
+				
+				\textcolor{mediumchameleon}{mediumchameleon}
+				
+				\textcolor{darkchameleon}{darkchameleon}
+				
+				\textcolor{turtlegreen}{turtlegreen}
+				
+				
+				
+				
+			\end{column}
+			\begin{column}{0.3\textwidth}\centering
+				\textcolor{lightskyblue}{lightskyblue}
+				
+				\textcolor{mediumskyblue}{mediumskyblue}
+				
+				\textcolor{darkskyblue}{darkskyblue}
+				
+				\textcolor{jeans}{jeans}
+				
+				\textcolor{lightplum}{lightplum}
+				
+				\textcolor{mediumplum}{mediumplum}
+				
+				\textcolor{darkplum}{darkplum}
+				
+				\textcolor{regal}{regal}
+				
+			\end{column}
+			\begin{column}{0.3\textwidth}\centering
+				\textcolor{lightaluminium}{lightaluminium}
+				
+				\textcolor{mediumaluminium}{mediumaluminium}
+				
+				\textcolor{darkaluminium}{darkaluminium}
+				
+				\textcolor{lightgray}{lightgray}
+				
+				\textcolor{ash}{ash}
+				
+				\textcolor{charcoal}{charcoal}
+				
+				\textcolor{darkcharcoal}{darkcharcoal}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+\subsection{Text Blocks}
+	\begin{frame}{Block Party}
+		\begin{block}{Block}
+			Normal block. Colorless, neutral.
+		\end{block}
+		
+		\begin{exampleblock}{Example Block}
+			Example block. (Potential uses: list of pros, relaxing facts)
+		\end{exampleblock}
+		
+		\begin{alertblock}{Alert Block}
+			Alert block. (Potential uses: list of cons, impending doom)
+		\end{alertblock}
+	\end{frame}
+
+\subsection{Lists}
+	\begin{frame}{Numbered and itemized lists}
+	\begin{enumerate}
+		\item
+			Numbered lists are themed up to three levels			
+		\item
+			The first level has numbers in squares
+		\begin{enumerate}\justifying
+			\item
+				The second level has
+			\item
+				two numbers in bold
+				\begin{enumerate}\justifying
+					\item
+						Levels below third are not themed					
+					\item 
+						and will be rendered using default template.
+				\end{enumerate}			
+		\end{enumerate}
+	\end{enumerate}
+	\begin{itemize}
+		\item
+			Itemized lists are themed up to three levels
+		\item
+			The first level has solid squares
+		\begin{itemize}
+			\item
+				The second level has solid triangles
+			\item
+				The third level has empty circles
+				\begin{itemize}
+					\item
+					Levels below third are not themed
+					\item
+					and will be rendered using default template.	
+				\end{itemize}	
+		\end{itemize}
+	\end{itemize}
+	
+	\end{frame}
+
+\section{References}
+	\begin{frame}{References}
+		\begin{itemize} \justifying
+			\item
+				Theme/color combinations for built-in Beamer themes: \href{https://mpetroff.net/files/beamer-theme-matrix/}{one} and \href{http://deic.uab.es/~iblanes/beamer_gallery/}{two}
+			\item
+				A list of custom Beamer themes: \href{https://latex.simon04.net/}{one} and \href{https://github.com/martinbjeldbak/ultimate-beamer-theme-list}{two}
+			\item
+				Beamer manual: \href{http://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf}{CTAN} and \href{https://en.wikibooks.org/wiki/LaTeX/Presentations}{WikiBooks}
+			\item
+				\href{http://www.cpt.univ-mrs.fr/~masson/latex/Beamer-appearance-cheat-sheet.pdf}{Cheat-sheet} on Beamer commands and options
+			\item
+				A nice \href{https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch}{example} of how to create a custom Beamer theme from scratch
+			\item
+				\href{https://github.com/ppletscher/beamerthemezurich}{Zurich} theme, which I modified to create this one
+			\item
+				\href{https://github.com/fliptanedo/FlipBeamerTheme}{Flip} thime, which is what Zurich theme was based upon
+		\end{itemize}
+	\end{frame}
+
+
+\end{document}
+
